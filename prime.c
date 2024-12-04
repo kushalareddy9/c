@@ -1,29 +1,17 @@
-#include <stdio.h>
-#include <stdbool.h>
-
-bool isPrime(int num) {
-    if (num <= 1) return false;
-    for (int i = 2; i * i <= num; i++) { 
-     square root of num
-        if (num % i == 0) return false; 
-    }
-    return true;
+#include<stdio.h>
+int x,c=1;
+int prime(int x);
+int main()
+{
+printf("Enter a number\n");
+scanf("%d",&x);
+prime(x);
 }
-
-int main() {
-    int start, end;
-
-    printf("Enter the start and end of the range: ");
-    scanf("%d %d", &start, &end);
-
-    printf("Prime numbers between %d and %d are:\n", start, end);
-    for (int i = start; i <= end; i++) {
-        if (isPrime(i)) {
-            printf("%d ", i);
-        }
+int prime(int x)
+{for (c=1;c<=x;c++)
+ {if (x%c==0)
+   {if (c==1) printf("Given number is a prime number");
+    else printf("Given number is not a prime number");}
     }
-    printf("\n");
-
-    return 0;
-}
-
+    
+    }
